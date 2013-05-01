@@ -41,8 +41,17 @@ public class Board extends ArrayList<ArrayList<Character>>
 	 */
 	public String toString()
 	{
-		//TODO: Create "toString" method.
-		return new String();
+		String result = new String();
+		
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 3; j++)
+				result += this.get(i).get(j);
+		
+			result += "\n";
+		}
+		
+		return result;
 	}
 	
 	/**
