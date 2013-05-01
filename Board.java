@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * A Tic-Tac-Toe Board. Holds the contents of a game or rule.
@@ -5,7 +6,7 @@
  * @author Mark Adams
  * @version 2013/05/01
  */
-public class Board
+public class Board extends ArrayList<ArrayList<Character>>
 {	
 	private static final long serialVersionUID = 1L;
 
