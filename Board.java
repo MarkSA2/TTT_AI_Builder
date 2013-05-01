@@ -25,8 +25,14 @@ public class Board extends ArrayList<ArrayList<Character>>
 	 * @return
 	 */
 	public Board initializeToToken(char token)
-	{
-		//TODO: Create "initializeToToken" method.
+	{	
+		for (int i = 0; i < 3; i++)
+		{
+			this.add(new ArrayList<Character>());
+			for (int j = 0; j < 3; j++)
+				this.get(i).add(j, token);
+		}
+		
 		return this;
 	}
 	
