@@ -32,4 +32,9 @@ public class BoardTest
 		assertEquals(true, this.board.get(2).get(1).equals(' '));
 		assertEquals(true, this.board.get(2).get(2).equals(' '));		
 	}
+	
+	public void testToString()
+	{
+		assertEquals(true, this.board.toString() == "   \n   \n   \n");
+	}
 }
