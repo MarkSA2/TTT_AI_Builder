@@ -37,8 +37,12 @@ public class Rule extends Board
 	 */
 	public int rowOrColNum(int position1)
 	{
-		//TODO: Create "rowOrColNum" method.
-		return 0;
+		int result = 0;
+		
+		if (position1 == 2 || position1 == 8)
+			result = 2;
+		
+		return result;
 	}
 	
 	/**
