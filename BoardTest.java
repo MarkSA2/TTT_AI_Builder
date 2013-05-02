@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
+ * Test the Board Class methods.
  * 
  * @author Mark Adams
  * @version 2013/05/01
