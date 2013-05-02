@@ -129,6 +129,22 @@ public class RuleTest
 		assertEquals(true, verticallyShiftedRule.getPos(2, 1) == '6');
 		assertEquals(true, verticallyShiftedRule.getPos(2, 2) == '7');
 	}
+	
+	@Test
+	public void testFlip()
+	{
+		Rule flippedRule = this.rule.flip();
+		
+		assertEquals(true, flippedRule.getPos(0, 0) == '2');
+		assertEquals(true, flippedRule.getPos(0, 1) == '1');
+		assertEquals(true, flippedRule.getPos(0, 2) == '0');
+		assertEquals(true, flippedRule.getPos(1, 0) == '5');
+		assertEquals(true, flippedRule.getPos(1, 1) == '4');
+		assertEquals(true, flippedRule.getPos(1, 2) == '3');
+		assertEquals(true, flippedRule.getPos(2, 0) == '8');
+		assertEquals(true, flippedRule.getPos(2, 1) == '7');
+		assertEquals(true, flippedRule.getPos(2, 2) == '6');
+	}
 }
 
 
