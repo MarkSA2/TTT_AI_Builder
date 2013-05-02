@@ -1,11 +1,10 @@
-
 /**
  * Based on specified scenarios, a Rule tells the Strategy how it should make moves on the Tic-Tac-Toe Board. 
  * 
  * @author Mark Adams
  * @version	2013/05/01
  */
-public class Rule 
+public class Rule extends Board
 {
 	private static final long serialVersionUID = 1L;
 	
