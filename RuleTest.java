@@ -63,4 +63,38 @@ public class RuleTest
 		assertEquals(false, this.rule.rotate90DegCCMiddlePos(0, 1, 2) == 5);
 		assertEquals(false, this.rule.rotate90DegCCMiddlePos(0, 1, 2) == 8);
 	}
+	
+	@Test 
+	public void testRotated90DegCCSection()
+	{
+		int[] rotatedSectionPositions = this.rule.rotated90DegCCSection(0, 1, 2);
+		
+		assertEquals(true, rotatedSectionPositions[0] == 6);
+		assertEquals(true, rotatedSectionPositions[1] == 3);
+		assertEquals(true, rotatedSectionPositions[2] == 0);
+		
+		rotatedSectionPositions = this.rule.rotated90DegCCSection(6, 3, 0);
+		
+		assertEquals(true, rotatedSectionPositions[0] == 8);
+		assertEquals(true, rotatedSectionPositions[1] == 7);
+		assertEquals(true, rotatedSectionPositions[2] == 6);
+		
+		rotatedSectionPositions = this.rule.rotated90DegCCSection(8, 7, 6);
+		
+		assertEquals(true, rotatedSectionPositions[0] == 2);
+		assertEquals(true, rotatedSectionPositions[1] == 5);
+		assertEquals(true, rotatedSectionPositions[2] == 8);
+		
+		rotatedSectionPositions = this.rule.rotated90DegCCSection(2, 5, 8);
+		
+		assertEquals(true, rotatedSectionPositions[0] == 0);
+		assertEquals(true, rotatedSectionPositions[1] == 1);
+		assertEquals(true, rotatedSectionPositions[2] == 2);
+		
+		rotatedSectionPositions = this.rule.rotated90DegCCSection(5, 2, 8);
+		
+		assertEquals(false, rotatedSectionPositions[0] == 0);
+		assertEquals(false, rotatedSectionPositions[1] == 1);
+		assertEquals(false, rotatedSectionPositions[2] == 2);
+	}
 }
