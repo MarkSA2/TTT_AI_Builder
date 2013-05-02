@@ -142,7 +142,12 @@ public class Rule extends Board
 	 */
 	public Rule flip()
 	{
-		//TODO: Create "flip" method.
-		return new Rule();
+		Rule flippedRule = new Rule();
+
+		for (int sRowGRow = 0; sRowGRow < 3; sRowGRow++)
+			for (int sCol = 0, gCol = 2; sCol < 3; sCol++, gCol--)
+				flippedRule.setPos(sRowGRow, sCol, this.getPos(sRowGRow, gCol));
+		
+		return flippedRule;
 	}
 }
