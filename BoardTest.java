@@ -33,8 +33,27 @@ public class BoardTest
 		assertEquals(true, this.board.get(2).get(2).equals(' '));		
 	}
 	
+	@Test
 	public void testToString()
 	{
-		assertEquals(true, this.board.toString() == "   \n   \n   \n");
+		assertEquals(true, this.board.toString().equals("   \n   \n   \n"));
+		assertEquals(false, this.board.toString().equals("   \n   \n   "));
+		assertEquals(false, this.board.toString().equals("         "));
+	}
+	
+	@Test
+	public void testSetPos()
+	{
+		this.board.setPos(0, 1, 'X');
+		assertEquals(true, this.board.get(0).get(1) == 'X');
+		assertEquals(false, this.board.get(0).get(1) == ' ');
+		
+		this.board.setPos(2, 2, '?');
+		assertEquals(true, this.board.get(2).get(2) == '?');
+		assertEquals(false, this.board.get(2).get(2) == '0');
+		
+		this.board.setPos(1, 1, ' ');
+		assertEquals(true, this.board.get(1).get(1) == ' ');
+		assertEquals(false, this.board.get(1).get(1) == '?');
 	}
 }
