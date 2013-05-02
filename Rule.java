@@ -2,7 +2,7 @@
  * Based on specified scenarios, a Rule tells the Strategy how it should make moves on the Tic-Tac-Toe Board. 
  * 
  * @author Mark Adams
- * @version	2013/05/01
+ * @version 2013/05/01
  */
 public class Rule extends Board
 {
@@ -10,7 +10,7 @@ public class Rule extends Board
 	
 	public Rule() 
 	{
-
+		this.initializeToToken('?');
 	}
 	
 	/**
@@ -20,8 +20,13 @@ public class Rule extends Board
 	 */
 	public Rule rotate90DegCW()
 	{
-		//TODO: Create "rotate90DegCW" method.
-		return new Rule();
+		Rule rotatedRule = new Rule();
+
+		for (int sRowGCol = 0; sRowGCol < 3; sRowGCol++)
+			for (int sCol = 0, gRow = 2; sCol < 3; sCol++, gRow--)
+				rotatedRule.setPos(sRowGCol, sCol, this.getPos(gRow, sRowGCol));
+				
+		return rotatedRule;	
 	}
 	
 	/**
