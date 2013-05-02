@@ -50,13 +50,20 @@ public class Rule extends Board
 	 * Assumes that together the positions make up a distinct row or column.
 	 * 
 	 * @param position1 -> The first position in the set of three positions.
+	 * @param position2 -> The middle position in the set of three positions.
 	 * @param position3 -> The last position in the set of three positions.
 	 * @return An integer representing the rotated middle position.
 	 */
-	public int rotate90DegCCMiddlePos(int position1, int position3)
+	public int rotate90DegCCMiddlePos(int position1, int position2, int position3)
 	{
-		//TODO: Create "rotate90DegCCMiddlePos" method.
-		return 0;
+		int middlePos = Math.max(position1, position3) - Math.min(position1, position3), rowOrColNum = rowOrColNum(position1);
+		
+		if (rowOrColNum < 2)
+			middlePos += rowOrColNum + 1;
+		else
+			middlePos = Math.abs((-1*middlePos) + position2);
+		
+		return middlePos;
 	}
 	
 	/**
