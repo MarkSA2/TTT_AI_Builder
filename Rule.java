@@ -95,8 +95,20 @@ public class Rule extends Board
 	 */
 	public Rule shiftHorizontal()
 	{
-		//TODO: Create "shiftHorizontal" method.
-		return new Rule();
+		//TODO: Find a better way to do this.
+		Rule shiftedRule = new Rule();
+
+		shiftedRule.setPos(0, 0, this.getPos(2, 0));
+		shiftedRule.setPos(0, 1, this.getPos(2, 1));
+		shiftedRule.setPos(0, 2, this.getPos(2, 2));
+		shiftedRule.setPos(1, 0, this.getPos(0, 0));
+		shiftedRule.setPos(1, 1, this.getPos(0, 1));
+		shiftedRule.setPos(1, 2, this.getPos(0, 2));
+		shiftedRule.setPos(2, 0, this.getPos(1, 0));
+		shiftedRule.setPos(2, 1, this.getPos(1, 1));
+		shiftedRule.setPos(2, 2, this.getPos(1, 2));
+
+		return shiftedRule;
 	}
 	
 	/**
