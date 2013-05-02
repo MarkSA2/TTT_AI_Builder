@@ -113,6 +113,22 @@ public class RuleTest
 		assertEquals(true, horizontallyShiftedRule.getPos(2, 1) == '4');
 		assertEquals(true, horizontallyShiftedRule.getPos(2, 2) == '5');
 	}
+	
+	@Test
+	public void testShiftVertical()
+	{
+		Rule verticallyShiftedRule = this.rule.shiftVertical();
+		
+		assertEquals(true, verticallyShiftedRule.getPos(0, 0) == '2');
+		assertEquals(true, verticallyShiftedRule.getPos(0, 1) == '0');
+		assertEquals(true, verticallyShiftedRule.getPos(0, 2) == '1');
+		assertEquals(true, verticallyShiftedRule.getPos(1, 0) == '5');
+		assertEquals(true, verticallyShiftedRule.getPos(1, 1) == '3');
+		assertEquals(true, verticallyShiftedRule.getPos(1, 2) == '4');
+		assertEquals(true, verticallyShiftedRule.getPos(2, 0) == '8');
+		assertEquals(true, verticallyShiftedRule.getPos(2, 1) == '6');
+		assertEquals(true, verticallyShiftedRule.getPos(2, 2) == '7');
+	}
 }
 
 
