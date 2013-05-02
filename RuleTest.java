@@ -97,4 +97,22 @@ public class RuleTest
 		assertEquals(false, rotatedSectionPositions[1] == 1);
 		assertEquals(false, rotatedSectionPositions[2] == 2);
 	}
+	
+	@Test
+	public void testShiftHorizontal()
+	{
+		Rule horizontallyShiftedRule = this.rule.shiftHorizontal();
+		
+		assertEquals(true, horizontallyShiftedRule.getPos(0, 0) == '6');
+		assertEquals(true, horizontallyShiftedRule.getPos(0, 1) == '7');
+		assertEquals(true, horizontallyShiftedRule.getPos(0, 2) == '8');
+		assertEquals(true, horizontallyShiftedRule.getPos(1, 0) == '0');
+		assertEquals(true, horizontallyShiftedRule.getPos(1, 1) == '1');
+		assertEquals(true, horizontallyShiftedRule.getPos(1, 2) == '2');
+		assertEquals(true, horizontallyShiftedRule.getPos(2, 0) == '3');
+		assertEquals(true, horizontallyShiftedRule.getPos(2, 1) == '4');
+		assertEquals(true, horizontallyShiftedRule.getPos(2, 2) == '5');
+	}
 }
+
+
