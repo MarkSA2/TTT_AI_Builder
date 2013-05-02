@@ -77,8 +77,14 @@ public class Rule extends Board
 	 */
 	public int[] rotated90DegCCSection(int position1, int position2, int position3)
 	{
-		//TODO: Create "rotated90DegCCSection" method. 
-		return new int[0];
+		int[] rotatedPositions = new int[3];
+		int middlePos = rotate90DegCCMiddlePos(position1, position2, position3);
+		
+		rotatedPositions[0] = (middlePos*2) - position1;
+		rotatedPositions[1] = middlePos;
+		rotatedPositions[2] = position1; // The last rotated position will always be the first argument position.
+		
+		return rotatedPositions;
 	}
 	
 	/**
