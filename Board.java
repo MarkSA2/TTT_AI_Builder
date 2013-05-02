@@ -63,7 +63,7 @@ public class Board extends ArrayList<ArrayList<Character>>
 	 */
 	public void setPos(int row, int col, char token)
 	{
-		//TODO: Create "setPos" method.
+		this.get(row).add(col, token);
 	}
 	
 	/**
