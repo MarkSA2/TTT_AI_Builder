@@ -51,4 +51,16 @@ public class RuleTest
 		assertEquals(true, this.rule.rowOrColNum(-1) == 0);
 		assertEquals(false, this.rule.rowOrColNum(5) == 2);
 	}
+	
+	@Test
+	public void testRotate90DegCCMiddlePos()
+	{
+		assertEquals(true, this.rule.rotate90DegCCMiddlePos(0, 1, 2) == 3);
+		assertEquals(true, this.rule.rotate90DegCCMiddlePos(6, 3, 0) == 7);
+		assertEquals(true, this.rule.rotate90DegCCMiddlePos(8, 7, 6) == 5);
+		assertEquals(true, this.rule.rotate90DegCCMiddlePos(2, 5, 8) == 1);
+		assertEquals(false, this.rule.rotate90DegCCMiddlePos(0, 1, 2) == 1);
+		assertEquals(false, this.rule.rotate90DegCCMiddlePos(0, 1, 2) == 5);
+		assertEquals(false, this.rule.rotate90DegCCMiddlePos(0, 1, 2) == 8);
+	}
 }
