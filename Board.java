@@ -12,7 +12,7 @@ public class Board extends ArrayList<ArrayList<Character>>
 
 	public Board()
 	{
-
+		this.initializeToToken(' ');
 	}
 	
 	/**
@@ -74,7 +74,6 @@ public class Board extends ArrayList<ArrayList<Character>>
 	 */
 	public char getPos(int row, int col)
 	{
-		//TODO: Create "getPos" method.
-		return ' ';
+		return this.get(row).get(col);
 	}
 }
