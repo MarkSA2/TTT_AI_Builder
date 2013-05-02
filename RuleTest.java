@@ -42,4 +42,13 @@ public class RuleTest
 		assertEquals(true, rotatedRule.getPos(2, 2) == '2');
 	}
 	
+	@Test
+	public void testRowOrColNum()
+	{
+		assertEquals(true, this.rule.rowOrColNum(2) == 2);
+		assertEquals(true, this.rule.rowOrColNum(8) == 2);
+		assertEquals(true, this.rule.rowOrColNum(10) == 0);
+		assertEquals(true, this.rule.rowOrColNum(-1) == 0);
+		assertEquals(false, this.rule.rowOrColNum(5) == 2);
+	}
 }
